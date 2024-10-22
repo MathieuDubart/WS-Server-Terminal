@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		611C4ADB2CC7C4F300351126 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C4ADA2CC7C4F300351126 /* main.swift */; };
+		611C4AE32CC7C5AB00351126 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 611C4AE22CC7C5AB00351126 /* Swifter */; };
+		611C4B062CC7E7F300351126 /* TerminalCommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */; };
+		ED9F334C2CC7EAD30020B490 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F334B2CC7EACC0020B490 /* WebSocketServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,8 @@
 /* Begin PBXFileReference section */
 		611C4AD72CC7C4F300351126 /* WebSocketServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WebSocketServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		611C4ADA2CC7C4F300351126 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalCommandExecutor.swift; sourceTree = "<group>"; };
+		ED9F334B2CC7EACC0020B490 /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611C4AE32CC7C5AB00351126 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				611C4ADA2CC7C4F300351126 /* main.swift */,
+				ED9F334B2CC7EACC0020B490 /* WebSocketServer.swift */,
+				611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */,
 			);
 			path = WebSocketServer;
 			sourceTree = "<group>";
@@ -78,6 +86,9 @@
 			dependencies = (
 			);
 			name = WebSocketServer;
+			packageProductDependencies = (
+				611C4AE22CC7C5AB00351126 /* Swifter */,
+			);
 			productName = WebSocketServer;
 			productReference = 611C4AD72CC7C4F300351126 /* WebSocketServer */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 611C4ACE2CC7C4F200351126;
+			packageReferences = (
+				611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = 611C4AD82CC7C4F300351126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9F334C2CC7EAD30020B490 /* WebSocketServer.swift in Sources */,
+				611C4B062CC7E7F300351126 /* TerminalCommandExecutor.swift in Sources */,
 				611C4ADB2CC7C4F300351126 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,10 +264,13 @@
 		611C4ADF2CC7C4F300351126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G739VH73FZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -259,10 +278,13 @@
 		611C4AE02CC7C4F300351126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G739VH73FZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -289,6 +311,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		611C4AE22CC7C5AB00351126 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 611C4ACF2CC7C4F200351126 /* Project object */;
 }

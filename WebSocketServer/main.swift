@@ -7,5 +7,7 @@
 
 import Foundation
 
-print("Hello, World!")
+var serverWS = WebSocketServer.shared
+serverWS.start()
 
+RunLoop.main.run()
